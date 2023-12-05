@@ -8,6 +8,7 @@ Code for my website [itdata.se](https://itdata.se)
 - [ ] Something to interact with (maybe a small game?)
 - [ ] Project Page
 - [ ] About page
+- [ ] Fix folder Structure, make a parent folder.
 - [X] Make a favicon for the website
 
 ## License
