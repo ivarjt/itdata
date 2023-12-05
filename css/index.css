@@ -12,15 +12,46 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Delugia Mono', sans-serif;
+    
 }
 
 body {
     display: grid;
-    place-items: center;
+    grid-template-columns: 1fr auto;
     height: 100vh;
     background-color: black;
-    margin: 0rem;
+    margin: 0;
     overflow: hidden;
+}
+
+.navbar-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.navbar a {
+    margin-bottom: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
 }
 
 .container {
@@ -52,28 +83,34 @@ body {
     line-height: 160px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    background: url(media/text-animation.png); 
+    background: url(../media/text-animation.png); 
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
 }
 
-.navbar {
+.icons {
     margin-top: 20px;
     text-align: center;
 }
 
-.navbar a {
+.icons a {
     margin: 0 10px;
     text-decoration: none;
     color: white;
     font-size: 72px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    background: url(media/text-animation.png); 
+    background: url(../media/text-animation.png); 
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 10s linear infinite; 
+    transition: transform 0.3s ease;
+    display: inline-block;/
+}
+
+.icons a:hover {
+    transform: scale(1.2);
 }
 
 @keyframes back {
@@ -97,5 +134,35 @@ body {
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text-box h1 {
+        font-size: 100px;
+        line-height: 80px;
+        margin-top: -300px;
+    }
+
+    .icons a {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-container {
+        position: static;
+        transform: translateY(0);
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-right: 30px;
+        margin-bottom: 0;
     }
 }
