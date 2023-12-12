@@ -10,6 +10,7 @@ Code for my website [itdata.se](https://itdata.se)
 - [ ] About page
 - [ ] Fix folder Structure, make a parent folder.
 - [X] Make a favicon for the website
+- [ ] Fix h1 "ITDATA" margin
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ivarjt/itdata/blob/main/LICENSE) file for details
