@@ -1,4 +1,134 @@
+@import url('https://fonts.cdnfonts.com/css/delugia-mono');
+
+
+:root {
+    --primary-color: rgb(27, 17, 117);
+    --secondary-color: rgb(74, 61, 155);
+    --tertiary-color: rgb(25, 146, 226);
+    --quaternary-color: rgb(123, 218, 218);
+}
+
 * {
-    background-color: rebeccapurple;
-    color: aliceblue;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Delugia Mono', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 100vh;
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 20px;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.navbar a {
+    margin-bottom: 60px;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--tertiary-color), var(--quaternary-color));
+    background-size: 300%, 300%;
+    animation: color 9s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--tertiary-color), var(--quaternary-color));
+    background-size: 300%, 300%;
+    animation: color 9s ease-in-out infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.text-box h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.text-box h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.text-box a {
+    font-size: 20;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.text-box a:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-container {
+        position: static;
+        transform: translateY(0);
+        padding: 0;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
 }
